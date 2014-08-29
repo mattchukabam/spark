@@ -22,4 +22,11 @@
 
 # include the datanucleus jars
 export SPARK_HIVE=true
-./make-distribution.sh --skip-java-test --tgz --name hadoop-2.4 -Phadoop-2.4 -Phive -Pyarn -Pkinesis-asl
+./make-distribution.sh --skip-java-test --tgz \
+  --name kprerelease \
+  -Phive \
+  -Pyarn \
+  -Pkinesis-asl
+
+  #--name hadoop-2.4 \
+  #-Phadoop-2.4 \
