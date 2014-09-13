@@ -21,12 +21,16 @@
 #./make-distribution.sh --skip-java-test --tgz -Phadoop-2.4 -Phadoop.version=2.4.1 -Phive
 
 # include the datanucleus jars
-export SPARK_HIVE=true
+export SPARK_HIVE=1
 ./make-distribution.sh --skip-java-test --tgz \
   --name kprerelease \
   -Phive \
-  -Pyarn \
-  -Pkinesis-asl
+  -Pkinesis-asl \
+  -Pbigtop-dist \
+  -Phadoop-2.2 #\
+  #-Dhadoop.version=2.2.0
 
+  #-Pyarn \
+  # always having trouble with 2.4
   #--name hadoop-2.4 \
   #-Phadoop-2.4 \
